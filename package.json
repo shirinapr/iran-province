@@ -1,8 +1,5 @@
 {
   "name": "iran-province",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/shirinapr"
-  },
   "version": "0.2.0",
   "description": "A customizable select-option for the provinces of Iran.",
   "main": "dist/cjs/index.js",
