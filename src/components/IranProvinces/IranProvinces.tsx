@@ -1,49 +1,88 @@
+import React from 'react';
+
 export interface Props {
-  label: string;
+  label?: string;
+  value?: string | any;
+  className?: string;
+  labelClass?: string;
+  selectClass?: string;
+  optionClass?: string;
+  placeholder?: string;
+  onChange: () => void;
+  language?: 'english' | 'persian';
 }
 const provinces = [
-  { farsi: "آذربایجان شرقی", english: "Azarbayjan, East" },
-  { farsi: "آذربایجان غربی", english: "Azarbayjan, West" },
-  { farsi: "اردبیل", english: "Ardabil" },
-  { farsi: "اصفهان", english: "Isfahan" },
-  { farsi: "البرز", english: "Alborz" },
-  { farsi: "ایلام", english: "Ilam" },
-  { farsi: "بوشهر", english: "Bushehr" },
-  { farsi: "تهران", english: "Tehran" },
-  { farsi: "چهارمحال و بختیاری", english: "Chaharmahal and Bakhtiyari" },
-  { farsi: "خراسان جنوبی", english: "Khorasan, South" },
-  { farsi: "خراسان رضوی", english: "Khorasan, Razavi" },
-  { farsi: "خراسان شمالی", english: "Khorasan, North" },
-  { farsi: "خوزستان", english: "Khuzestan" },
-  { farsi: "زنجان", english: "Zanjan" },
-  { farsi: "سمنان", english: "Semnan" },
-  { farsi: "سیستان و بلوچستان", english: "Sistan and Baluchestan" },
-  { farsi: "فارس", english: "Fars" },
-  { farsi: "قزوین", english: "Qazvin" },
-  { farsi: "قم", english: "Qom" },
-  { farsi: "کردستان", english: "Kordestan" },
-  { farsi: "کرمان", english: "Kerman" },
-  { farsi: "کرمانشاه", english: "Kermanshah" },
-  { farsi: "کهگیلویه و بویراحمد", english: "Kohkilouye and Boyerahmad" },
-  { farsi: "گلستان", english: "Golestan" },
-  { farsi: "گیلان", english: "Gilan" },
-  { farsi: "لرستان", english: "Lorestan" },
-  { farsi: "مازندران", english: "Mazandaran" },
-  { farsi: "مرکزی", english: "Markazi" },
-  { farsi: "هرمزگان", english: "Hormozgan" },
-  { farsi: "همدان", english: "Hamedan" },
-  { farsi: "یزد", english: "Yazd" },
+  { persian: 'آذربایجان شرقی', english: 'Azarbayjan, East' },
+  { persian: 'آذربایجان غربی', english: 'Azarbayjan, West' },
+  { persian: 'اردبیل', english: 'Ardabil' },
+  { persian: 'اصفهان', english: 'Isfahan' },
+  { persian: 'البرز', english: 'Alborz' },
+  { persian: 'ایلام', english: 'Ilam' },
+  { persian: 'بوشهر', english: 'Bushehr' },
+  { persian: 'تهران', english: 'Tehran' },
+  { persian: 'چهارمحال و بختیاری', english: 'Chaharmahal and Bakhtiyari' },
+  { persian: 'خراسان جنوبی', english: 'Khorasan, South' },
+  { persian: 'خراسان رضوی', english: 'Khorasan, Razavi' },
+  { persian: 'خراسان شمالی', english: 'Khorasan, North' },
+  { persian: 'خوزستان', english: 'Khuzestan' },
+  { persian: 'زنجان', english: 'Zanjan' },
+  { persian: 'سمنان', english: 'Semnan' },
+  { persian: 'سیستان و بلوچستان', english: 'Sistan and Baluchestan' },
+  { persian: 'فارس', english: 'Fars' },
+  { persian: 'قزوین', english: 'Qazvin' },
+  { persian: 'قم', english: 'Qom' },
+  { persian: 'کردستان', english: 'Kordestan' },
+  { persian: 'کرمان', english: 'Kerman' },
+  { persian: 'کرمانشاه', english: 'Kermanshah' },
+  { persian: 'کهگیلویه و بویراحمد', english: 'Kohkilouye and Boyerahmad' },
+  { persian: 'گلستان', english: 'Golestan' },
+  { persian: 'گیلان', english: 'Gilan' },
+  { persian: 'لرستان', english: 'Lorestan' },
+  { persian: 'مازندران', english: 'Mazandaran' },
+  { persian: 'مرکزی', english: 'Markazi' },
+  { persian: 'هرمزگان', english: 'Hormozgan' },
+  { persian: 'همدان', english: 'Hamedan' },
+  { persian: 'یزد', english: 'Yazd' },
 ];
 
-const IranProvinces = ({ label }: Props) => (
-  <div>
-    {label ? <label className="label">استان ها</label> : ""}
-    <select className="select">
+const IranProvinces = ({
+  label,
+  value,
+  className,
+  labelClass,
+  language,
+  onChange,
+  selectClass,
+  optionClass,
+  placeholder,
+}: Props) => (
+  <div className={className}>
+    {label ? <label className={labelClass}>{label}</label> : ''}
+
+    <select
+      value={value}
+      onChange={onChange}
+      className={selectClass}
+      placeholder={placeholder}
+    >
       {provinces.map((x) => (
-        <option value={x.english}>{x.farsi}</option>
+        <option value={x.english} className={optionClass}>
+          {language === 'persian' ? x.persian : x.english}
+        </option>
       ))}
     </select>
   </div>
 );
+
+IranProvinces.defaultProps = {
+  label: '',
+  value: '',
+  className: '',
+  labelClass: '',
+  selectClass: '',
+  optionClass: '',
+  placeholder: '',
+  language: 'persian',
+};
 
 export default IranProvinces;
