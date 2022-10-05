@@ -12,7 +12,8 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "publish": "npm publish --access public"
   },
   "author": "Shirin Apr <shirinapr1@gmail.com>",
   "license": "MIT",
