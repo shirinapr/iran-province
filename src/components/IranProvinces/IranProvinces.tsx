@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface Props {
   label?: string;
-  value?: string | any;
+  defaultValue?: string | any;
   className?: string;
   labelClass?: string;
   selectClass?: string;
@@ -47,7 +47,7 @@ const provinces = [
 
 const IranProvinces = ({
   label,
-  value,
+  defaultValue,
   className,
   labelClass,
   language,
@@ -60,7 +60,7 @@ const IranProvinces = ({
     {label ? <label className={labelClass}>{label}</label> : ''}
 
     <select
-      value={value}
+      defaultValue={defaultValue}
       onChange={onChange}
       className={selectClass}
       placeholder={placeholder}
