@@ -234,7 +234,7 @@ const provinces = [
     persian: 'مرکزی',
     english: 'Markazi',
     latitude: 33.5093294,
-    longitude: -92.396119,
+    longitude: 48.8791829,
   },
   {
     id: '29',
