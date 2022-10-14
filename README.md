@@ -22,7 +22,6 @@ import { IranProvince } from 'iran-province';
   selectClass={selectClass}
   optionClass={optionClass}
   placeholder="placeholder"
-  defaultValue={defaultValue}
   onChange={() => {}}
 />;
 ```
@@ -32,7 +31,6 @@ import { IranProvince } from 'iran-province';
 Common props you may want to specify include:
 
 - `label` - apply name to the select
-- `defaultValue` - control the default value
 - `className` - apply a className to the container
 - `labelClass` - apply a className to the label
 - `selectClass` - apply a className to the select
