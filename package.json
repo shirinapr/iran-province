@@ -1,6 +1,6 @@
 {
   "name": "iran-province",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "A customizable select-option for the provinces of Iran.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
