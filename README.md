@@ -41,7 +41,7 @@ Common props you may want to specify include:
 
 ### Provinces type
 
-```jsx
+```tsx
 interface IProvince {
   id: string;
   isCapital: boolean;
