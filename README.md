@@ -1,4 +1,4 @@
-# iran-province
+# iran-provinces
 
 A customizable select,
 witch has all the cities in Iran.
@@ -6,7 +6,7 @@ witch has all the cities in Iran.
 ## Installation
 
 ```
-npm i iran-province
+npm i iran-provinces
 ```
 
 ## Usage
