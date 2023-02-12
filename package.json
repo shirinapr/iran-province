@@ -7,6 +7,13 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "react",
+    "react-component",
+    "select",
+    "iran-province",
+    "iran"
+  ],
   "types": "dist/index.d.ts",
   "scripts": {
     "rollup": "rollup -c",
