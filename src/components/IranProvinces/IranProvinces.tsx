@@ -1,5 +1,5 @@
-import React from "react";
-import provinces from "./data.json";
+import React from 'react';
+import provinces from './data.json';
 
 export interface Props {
   label?: string;
@@ -9,7 +9,7 @@ export interface Props {
   optionClass?: string;
   placeholder?: string;
   onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  language?: "english" | "persian";
+  language?: 'english' | 'persian';
 }
 
 const IranProvinces = ({
@@ -22,28 +22,18 @@ const IranProvinces = ({
   optionClass,
   placeholder,
 }: Props) => {
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    onChange({
-      ...e,
-      target: {
-        ...e.target,
-        value: provinces.find((x) => x.english === e.target.value),
-      },
-    });
-  };
-
   return (
     <div className={className}>
-      {label ? <label className={labelClass}>{label}</label> : ""}
+      {label ? <label className={labelClass}>{label}</label> : ''}
 
       <select
-        onChange={handleChange}
+        onChange={onChange}
         className={selectClass}
         placeholder={placeholder}
       >
         {provinces.map((x) => (
           <option key={x.english} value={x.english} className={optionClass}>
-            {language === "persian" ? x.persian : x.english}
+            {language === 'persian' ? x.persian : x.english}
           </option>
         ))}
       </select>
@@ -52,13 +42,13 @@ const IranProvinces = ({
 };
 
 IranProvinces.defaultProps = {
-  label: "",
-  className: "",
-  labelClass: "",
-  selectClass: "",
-  optionClass: "",
-  placeholder: "",
-  language: "persian",
+  label: '',
+  className: '',
+  labelClass: '',
+  selectClass: '',
+  optionClass: '',
+  placeholder: '',
+  language: 'persian',
 };
 
 export default IranProvinces;
