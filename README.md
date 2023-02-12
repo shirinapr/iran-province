@@ -12,9 +12,9 @@ npm i iran-province
 ## Usage
 
 ```jsx
-import { IranProvince } from 'iran-province';
+import { IranProvinces } from 'iran-province';
 
-<IranProvince
+<IranProvinces
   label={label}
   language="persian"
   className={className}
