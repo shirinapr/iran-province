@@ -14,7 +14,7 @@
   },
   "author": "Shirin Apr <shirinapr1@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/shirinapr/iran-province",
+  "repository": "https://github.com/shirinapr/iran-provinces",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
