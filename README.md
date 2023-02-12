@@ -12,7 +12,7 @@ npm i iran-province
 ## Usage
 
 ```jsx
-import { IranProvince } from 'iran-province';
+import IranProvince from 'iran-province';
 
 <IranProvince
   label={label}
