@@ -1,5 +1,5 @@
 {
-  "name": "iran-provinces",
+  "name": "iran-province",
   "version": "0.3.3",
   "description": "A customizable select-option for the provinces of Iran.",
   "main": "dist/cjs/index.js",
@@ -14,7 +14,7 @@
   },
   "author": "Shirin Apr <shirinapr1@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/shirinapr/iran-provinces",
+  "repository": "https://github.com/shirinapr/iran-province",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",

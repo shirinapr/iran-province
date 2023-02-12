@@ -1,4 +1,4 @@
-# iran-provinces
+# iran-province
 
 A customizable select,
 witch has all the cities in Iran.
@@ -6,15 +6,15 @@ witch has all the cities in Iran.
 ## Installation
 
 ```
-npm i iran-provinces
+npm i iran-province
 ```
 
 ## Usage
 
 ```jsx
-import { IranProvinces } from 'iran-province';
+import { IranProvince } from 'iran-province';
 
-<IranProvinces
+<IranProvince
   label={label}
   language="persian"
   className={className}

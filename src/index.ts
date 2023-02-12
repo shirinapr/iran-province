@@ -1,3 +1,3 @@
-import { IranProvinces } from "./components";
+import { IranProvince } from './components';
 
-export default IranProvinces;
+export default IranProvince;

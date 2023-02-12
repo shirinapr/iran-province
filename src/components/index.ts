@@ -1,1 +1,1 @@
-export { default as IranProvinces } from "./IranProvinces";
+export { default as IranProvince } from './IranProvince';

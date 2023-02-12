@@ -12,7 +12,7 @@ export interface Props {
   language?: 'english' | 'persian';
 }
 
-const IranProvinces = ({
+const IranProvince = ({
   label,
   className,
   labelClass,
@@ -41,7 +41,7 @@ const IranProvinces = ({
   );
 };
 
-IranProvinces.defaultProps = {
+IranProvince.defaultProps = {
   label: '',
   className: '',
   labelClass: '',
@@ -51,4 +51,4 @@ IranProvinces.defaultProps = {
   language: 'persian',
 };
 
-export default IranProvinces;
+export default IranProvince;
