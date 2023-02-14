@@ -1,7 +1,7 @@
 # iran-province
 
 A customizable select,
-witch has all the cities in Iran.
+witch has all the provinces in Iran.
 
 ## Installation
 
@@ -31,10 +31,26 @@ import IranProvince from 'iran-province';
 Common props you may want to specify include:
 
 - `label` - apply name to the select
-- `className` - apply a className to the container
 - `labelClass` - apply a className to the label
 - `selectClass` - apply a className to the select
 - `optionClass` - apply a className to the options
+- `className` - apply a className to the container
 - `language` - you can choose between persian and english
-- `placeholder` - change the text displayed when no option is selected
 - `onChange` - handle what happens after changing a value
+- `placeholder` - change the text displayed when no option is selected
+
+### Provinces type
+
+```tsx
+interface IProvince {
+  id: string;
+  isCapital: boolean;
+  persian: string;
+  english: string;
+  latitude: number;
+  longitude: number;
+}
+```
+## License
+
+MIT Licensed. Copyright (c) 2023 Shirin apr
