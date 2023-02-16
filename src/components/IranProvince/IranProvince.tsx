@@ -10,7 +10,13 @@ interface IProvince {
   population: number;
 }
 
+interface ISort {
+  by: 'population' | 'longitude' | 'latitude' | 'english' | 'persian';
+  order: 'asc' | 'desc';
+}
+
 export interface Props {
+  sort?: ISort;
   label?: string;
   className?: string;
   labelClass?: string;
@@ -304,6 +310,7 @@ const provinces: IProvince[] = [
 ];
 
 const IranProvince = ({
+  sort,
   label,
   className,
   labelClass,
@@ -320,6 +327,47 @@ const IranProvince = ({
       onChange(p);
     }
   };
+
+  const stringSorter = (x: string, y: string) => {
+    if (x > y) {
+      return -1;
+    }
+    if (y > x) {
+      return 1;
+    }
+    return 0;
+  };
+
+  if (sort) {
+    provinces.sort((a, b) => {
+      const englishA = a.english.toUpperCase();
+      const englishB = b.english.toUpperCase();
+
+      if (sort.order === 'asc') {
+        if (sort.by === 'population') return a.population - b.population;
+
+        if (sort.by === 'english') return stringSorter(englishA, englishB);
+
+        if (sort.by === 'persian') return stringSorter(a.persian, b.persian);
+
+        if (sort.by === 'latitude') return a.latitude - b.latitude;
+
+        if (sort.by === 'longitude') return a.longitude - b.population;
+      }
+      if (sort.order === 'desc') {
+        if (sort.by === 'population') return b.population - a.population;
+
+        if (sort.by === 'english') return stringSorter(englishB, englishA);
+
+        if (sort.by === 'persian') return stringSorter(b.persian, a.persian);
+
+        if (sort.by === 'latitude') return b.latitude - a.latitude;
+
+        if (sort.by === 'longitude') return b.population - a.longitude;
+      }
+    });
+  }
+
   return (
     <div className={className}>
       {label ? <label className={labelClass}>{label}</label> : ''}
