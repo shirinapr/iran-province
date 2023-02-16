@@ -17,8 +17,11 @@ interface ISort {
 
 export interface Props {
   sort?: ISort;
+  form?: string;
   label?: string;
+  disabled?: boolean;
   className?: string;
+  autoFocus?: boolean;
   labelClass?: string;
   selectClass?: string;
   optionClass?: string;
@@ -311,11 +314,14 @@ const provinces: IProvince[] = [
 
 const IranProvince = ({
   sort,
+  form,
   label,
-  className,
-  labelClass,
   language,
+  disabled,
   onChange,
+  className,
+  autoFocus,
+  labelClass,
   selectClass,
   optionClass,
   placeholder,
@@ -365,7 +371,7 @@ const IranProvince = ({
 
         if (sort.by === "longitude") return b.population - a.longitude;
       }
-      return provinces;
+      return 1;
     });
   }
 
@@ -374,6 +380,9 @@ const IranProvince = ({
       {label ? <label className={labelClass}>{label}</label> : ""}
 
       <select
+        form={form}
+        disabled={disabled}
+        autoFocus={autoFocus}
         onChange={handleChange}
         className={selectClass}
         placeholder={placeholder}
@@ -389,12 +398,15 @@ const IranProvince = ({
 };
 
 IranProvince.defaultProps = {
+  form: "",
   label: "",
   className: "",
   labelClass: "",
+  disabled: false,
   selectClass: "",
   optionClass: "",
   placeholder: "",
+  autoFocus: false,
   language: "persian",
 };
 
