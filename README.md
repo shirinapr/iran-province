@@ -46,11 +46,12 @@ Common props you may want to specify include:
 ```tsx
 interface IProvince {
   id: string;
-  isCapital: boolean;
   persian: string;
   english: string;
   latitude: number;
   longitude: number;
+  isCapital: boolean;
+  population: number;
 }
 ```
 ## License
