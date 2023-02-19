@@ -352,9 +352,9 @@ const IranProvince = ({
       if (sort.order === "asc") {
         if (sort.by === "population") return a.population - b.population;
 
-        if (sort.by === "english") return stringSorter(englishA, englishB);
+        if (sort.by === "english") return stringSorter(englishB, englishA);
 
-        if (sort.by === "persian") return stringSorter(a.persian, b.persian);
+        if (sort.by === "persian") return stringSorter(b.persian, a.persian);
 
         if (sort.by === "latitude") return a.latitude - b.latitude;
 
@@ -363,9 +363,9 @@ const IranProvince = ({
       if (sort.order === "desc") {
         if (sort.by === "population") return b.population - a.population;
 
-        if (sort.by === "english") return stringSorter(englishB, englishA);
+        if (sort.by === "english") return stringSorter(englishA, englishB);
 
-        if (sort.by === "persian") return stringSorter(b.persian, a.persian);
+        if (sort.by === "persian") return stringSorter(a.persian, b.persian);
 
         if (sort.by === "latitude") return b.latitude - a.latitude;
 
