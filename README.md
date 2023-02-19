@@ -1,7 +1,7 @@
 # iran-province
 
 A customizable select,
-witch has all the provinces in Iran.
+which has all the provinces in Iran.
 
 ## Installation
 
