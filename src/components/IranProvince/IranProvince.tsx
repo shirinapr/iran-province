@@ -6,16 +6,16 @@ interface IProvince {
   english: string;
   latitude: number;
   longitude: number;
-  isCapital: boolean;
+  isCapital?: boolean;
   population: number;
 }
 
 interface ISort {
   by: "population" | "longitude" | "latitude" | "english" | "persian";
-  order: "asc" | "desc";
+  order?: -1 | 1;
 }
 
-export interface Props {
+interface Props {
   sort?: ISort;
   form?: string;
   label?: string;
@@ -33,7 +33,6 @@ export interface Props {
 const provinces: IProvince[] = [
   {
     id: "1",
-    isCapital: false,
     persian: "آذربایجان شرقی",
     english: "East Azarbayjan",
     latitude: 37.9035733,
@@ -42,7 +41,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "2",
-    isCapital: false,
     persian: "آذربایجان غربی",
     english: "West Azarbayjan",
     latitude: 37.4550062,
@@ -51,7 +49,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "3",
-    isCapital: false,
     persian: "اردبیل",
     english: "Ardabil",
     latitude: 38.4853276,
@@ -60,7 +57,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "4",
-    isCapital: false,
     persian: "اصفهان",
     english: "Isfahan",
     latitude: 32.6546275,
@@ -69,7 +65,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "5",
-    isCapital: false,
     persian: "البرز",
     english: "Alborz",
     latitude: 35.9960467,
@@ -78,7 +73,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "6",
-    isCapital: false,
     persian: "ایلام",
     english: "Ilam",
     latitude: 33.2957618,
@@ -87,7 +81,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "7",
-    isCapital: false,
     persian: "بوشهر",
     english: "Bushehr",
     latitude: 28.9233837,
@@ -105,7 +98,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "9",
-    isCapital: false,
     persian: "چهارمحال و بختیاری",
     english: "Chaharmahal and Bakhtiyari",
     latitude: 31.9614348,
@@ -114,7 +106,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "10",
-    isCapital: false,
     persian: "خراسان جنوبی",
     english: "South Khorasan",
     latitude: 32.5175643,
@@ -123,7 +114,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "11",
-    isCapital: false,
     persian: "خراسان رضوی",
     english: "Khorasan Razavi",
     latitude: 35.1020253,
@@ -132,7 +122,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "12",
-    isCapital: false,
     persian: "خراسان شمالی",
     english: "North Khorasan",
     latitude: 37.4710353,
@@ -141,7 +130,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "13",
-    isCapital: false,
     persian: "خوزستان",
     english: "Khuzestan",
     latitude: 31.4360149,
@@ -150,7 +138,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "14",
-    isCapital: false,
     persian: "زنجان",
     english: "Zanjan",
     latitude: 36.5018185,
@@ -159,7 +146,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "15",
-    isCapital: false,
     persian: "سمنان",
     english: "Semnan",
     latitude: 35.2255585,
@@ -168,7 +154,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "16",
-    isCapital: false,
     persian: "سیستان و بلوچستان",
     english: "Sistan and Baluchestan",
     latitude: 27.5299906,
@@ -177,7 +162,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "17",
-    isCapital: false,
     persian: "فارس",
     english: "Fars",
     latitude: 29.1043813,
@@ -186,7 +170,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "18",
-    isCapital: false,
     persian: "قزوین",
     english: "Qazvin",
     latitude: 36.0881317,
@@ -195,7 +178,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "19",
-    isCapital: false,
     persian: "قم",
     english: "Qom",
     latitude: 34.6399443,
@@ -204,7 +186,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "20",
-    isCapital: false,
     persian: "کردستان",
     english: "Kordestan",
     latitude: 35.9553579,
@@ -213,7 +194,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "21",
-    isCapital: false,
     persian: "کرمان",
     english: "Kerman",
     latitude: 30.2839379,
@@ -222,7 +202,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "22",
-    isCapital: false,
     persian: "کرمانشاه",
     english: "Kermanshah",
     latitude: 34.314167,
@@ -231,7 +210,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "23",
-    isCapital: false,
     persian: "کهگیلویه و بویراحمد",
     english: "Kohkilouye and Boyerahmad",
     latitude: 30.6509479,
@@ -240,7 +218,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "24",
-    isCapital: false,
     persian: "گلستان",
     english: "Golestan",
     latitude: 37.2898123,
@@ -249,7 +226,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "25",
-    isCapital: false,
     persian: "گیلان",
     english: "Gilan",
     latitude: 37.1171617,
@@ -258,7 +234,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "26",
-    isCapital: false,
     persian: "لرستان",
     english: "Lorestan",
     latitude: 33.5818394,
@@ -267,7 +242,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "27",
-    isCapital: false,
     persian: "مازندران",
     english: "Mazandaran",
     latitude: 36.2262393,
@@ -276,7 +250,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "28",
-    isCapital: false,
     persian: "مرکزی",
     english: "Markazi",
     latitude: 33.5093294,
@@ -285,7 +258,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "29",
-    isCapital: false,
     persian: "هرمزگان",
     english: "Hormozgan",
     latitude: 27.138723,
@@ -294,7 +266,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "30",
-    isCapital: false,
     persian: "همدان",
     english: "Hamedan",
     latitude: 34.7607999,
@@ -303,7 +274,6 @@ const provinces: IProvince[] = [
   },
   {
     id: "31",
-    isCapital: false,
     persian: "یزد",
     english: "Yazd",
     latitude: 32.1006387,
@@ -311,103 +281,61 @@ const provinces: IProvince[] = [
     population: 1138533,
   },
 ];
+const sortableFields: ISort["by"][] = [
+  "population",
+  "english",
+  "persian",
+  "latitude",
+  "longitude",
+];
+
+const compare = <T extends {}>(list: T[], key: keyof T, order: 1 | -1 = -1): T[] => {
+  return list.sort((a, b): number => {
+    if (a[key] < b[key]) return order * 1;
+    if (a[key] > b[key]) return order * -1;
+    return 0;
+  });
+};
 
 const IranProvince = ({
   sort,
-  form,
-  label,
-  language,
-  disabled,
+  form = "",
+  label = "",
+  language = "persian",
+  disabled = false,
   onChange,
-  className,
-  autoFocus,
-  labelClass,
-  selectClass,
-  optionClass,
-  placeholder,
+  className = "",
+  autoFocus = false,
+  labelClass = "",
+  selectClass = "",
+  optionClass = "",
+  placeholder = "",
 }: Props) => {
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const p = provinces.find((x) => x.english === e.target.value);
-
-    if (p) {
-      onChange(p);
-    }
+    const province = provinces.find(({ english }) => english === e.target.value);
+    province && onChange(province);
   };
-
-  const stringSorter = (x: string, y: string) => {
-    if (x > y) {
-      return -1;
-    }
-    if (y > x) {
-      return 1;
-    }
-    return 0;
-  };
-
-  if (sort) {
-    provinces.sort((a, b) => {
-      const englishA = a.english.toUpperCase();
-      const englishB = b.english.toUpperCase();
-
-      if (sort.order === "asc") {
-        if (sort.by === "population") return a.population - b.population;
-
-        if (sort.by === "english") return stringSorter(englishB, englishA);
-
-        if (sort.by === "persian") return stringSorter(b.persian, a.persian);
-
-        if (sort.by === "latitude") return a.latitude - b.latitude;
-
-        if (sort.by === "longitude") return a.longitude - b.population;
-      }
-      if (sort.order === "desc") {
-        if (sort.by === "population") return b.population - a.population;
-
-        if (sort.by === "english") return stringSorter(englishA, englishB);
-
-        if (sort.by === "persian") return stringSorter(a.persian, b.persian);
-
-        if (sort.by === "latitude") return b.latitude - a.latitude;
-
-        if (sort.by === "longitude") return b.population - a.longitude;
-      }
-      return 1;
-    });
-  }
+  sort && sortableFields.includes(sort.by) && compare(provinces, sort.by, sort.order);
 
   return (
     <div className={className}>
-      {label ? <label className={labelClass}>{label}</label> : ""}
-
+      {label ? <label className={labelClass}>{label}</label> : null}
       <select
         form={form}
         disabled={disabled}
         autoFocus={autoFocus}
         onChange={handleChange}
         className={selectClass}
-        placeholder={placeholder}
-      >
-        {provinces.map((x) => (
-          <option key={x.english} value={x.english} className={optionClass}>
-            {language === "persian" ? x.persian : x.english}
+        placeholder={placeholder}>
+        {provinces.map(({ english, persian }) => (
+          <option key={english} value={english} className={optionClass}>
+            {language === "persian" ? persian : english}
+            {/* province[language] */}
           </option>
         ))}
       </select>
     </div>
   );
-};
-
-IranProvince.defaultProps = {
-  form: "",
-  label: "",
-  className: "",
-  labelClass: "",
-  disabled: false,
-  selectClass: "",
-  optionClass: "",
-  placeholder: "",
-  autoFocus: false,
-  language: "persian",
 };
 
 export default IranProvince;
