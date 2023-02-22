@@ -17,8 +17,11 @@ import IranProvince from 'iran-province';
 const App = () => (
   <>
     <IranProvince
-      onChange={(e) => {console.log(e)}}
-    />;
+      onChange={(province) => {
+        console.log(province);
+      }}
+    />
+    ;
   </>
 );
 
@@ -50,7 +53,7 @@ interface IProvince {
   english: string;
   latitude: number;
   longitude: number;
-  isCapital: boolean;
+  isCapital?: boolean;
   population: number;
 }
 ```
